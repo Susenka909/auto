@@ -20,6 +20,7 @@ basic.forever(function () {
             . . # . .
             . . # . .
             `)
+        music.playTone(988, music.beat(BeatFraction.Double))
     } else if (pins.digitalReadPin(DigitalPin.P1) == 0 && pins.digitalReadPin(DigitalPin.P2) == 1) {
         右转()
         basic.showLeds(`
@@ -29,6 +30,7 @@ basic.forever(function () {
             . . . # .
             . . . . .
             `)
+        music.playTone(659, music.beat(BeatFraction.Double))
     } else if (pins.digitalReadPin(DigitalPin.P1) == 1 && pins.digitalReadPin(DigitalPin.P2) == 0) {
         左转()
         basic.showLeds(`
@@ -38,5 +40,6 @@ basic.forever(function () {
             . # . . .
             . . . . .
             `)
+        music.playTone(165, music.beat(BeatFraction.Double))
     }
 })
